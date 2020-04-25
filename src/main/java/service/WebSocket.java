@@ -1,4 +1,4 @@
-package dp;
+package service;
 
 import java.net.URISyntaxException;
 
@@ -10,11 +10,11 @@ import io.socket.emitter.Emitter;
  * Hello world!
  *
  */
-public class App {
+public class WebSocket {
     private static Socket socket = null;
 
-    public static void main(String[] args) {
-        System.out.println("Java Messenger");
+    public void init() {
+        System.out.println("initiated the Web Socket");
         try {
             socket = IO.socket("http://127.0.0.1:4500");
             socket.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
@@ -44,6 +44,5 @@ public class App {
         } catch (URISyntaxException excep) {
             excep.printStackTrace();
         }
-
     }
 }
