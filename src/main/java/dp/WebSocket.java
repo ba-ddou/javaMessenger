@@ -4,8 +4,6 @@ import java.net.URISyntaxException;
 
 import com.google.gson.Gson;
 
-import org.json.JSONObject;
-
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
