@@ -42,9 +42,9 @@ public class WebSocket {
                 @Override
                 public void call(Object... args) {
                     // System.out.println("message received");
-                    System.out.println(args[0]);
+                    // System.out.println(args[0]);
 
-                    Message msg = new Gson().fromJson((String) args[0], Message.class).setTimestamp();
+                    Message msg = new Gson().fromJson((String) args[0], Message.class);
 
                     ControllerRef.onNewMessage(msg);
 
@@ -54,6 +54,7 @@ public class WebSocket {
 
                 @Override
                 public void call(Object... args) {
+                    // init();
                 }
 
             });
@@ -61,6 +62,14 @@ public class WebSocket {
         } catch (URISyntaxException excep) {
             excep.printStackTrace();
         }
+
     }
 
+    public void emitEvent(String eventName, Message message) {
+        // System.out.println(
+        // "from: " + message.from + "\nmessage:" + message.message + "\ntimesstaamp:" +
+        // message.timestamp);
+        socketConnection.emit(eventName, "{\"from\":\"" + message.from + "\",\"message\":\"" + message.message
+                + "\",\"timestamp\":\"" + message.timestamp + "\"}");
+    }
 }
