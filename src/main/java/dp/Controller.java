@@ -31,7 +31,7 @@ public class Controller {
     private void renderChatWindow(String username, String token) {
         authenticationWindow.dispose();
         dataStore = new DataStore(new User(username, token));
-        chatWindow = new ChatWindow(this);
+        chatWindow = new ChatWindow(this, username);
         dataStore.addObserver(chatWindow);
         webSocketRef = WebSocket.getInstance(this);
     }
@@ -40,7 +40,7 @@ public class Controller {
         System.out
                 .println("from: " + message.from + "\nmessage:" + message.message + "\ntimestamp:" + message.timestamp);
         dataStore.addMessage(message);
-        sendMessage("Hello motherfucker");
+        // sendMessage("Hello motherfucker");
     }
 
     public void sendMessage(String text) {
