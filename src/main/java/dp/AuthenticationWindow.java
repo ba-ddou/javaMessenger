@@ -25,8 +25,8 @@ public class AuthenticationWindow extends JFrame {
      *
      */
     private static final long serialVersionUID = 1L;
-    private JTextField usernameInput = new JTextField(25);
-    private JTextField passwordInput = new JTextField(25);
+    private JTextField usernameInput = new JTextField(20);
+    private JTextField passwordInput = new JTextField(20);
     private JButton connectButton = new JButton("login");
     private Controller controllerRef = null;
 
@@ -68,7 +68,7 @@ public class AuthenticationWindow extends JFrame {
         authenticationPanel.add(connectButton);
 
         add("Center", authenticationPanel);
-        this.setSize(300, 300);
+        this.setSize(300, 200);
         this.setVisible(true);
     }
 
@@ -88,6 +88,13 @@ public class AuthenticationWindow extends JFrame {
             String response = post("http://127.0.0.1:4500/authentication",
                     "{\"username\":\"" + username + "\",\"password\":\"" + password + "\"}");
             System.out.println("response: " + response);
+            // System.out.println(response.equalsIgnoreCase("false"));
+            if (!response.equalsIgnoreCase("false"))
+                controllerRef.onSuccessfullAuthentication(username, response);
+            else {
+                usernameInput.setText("");
+                passwordInput.setText("");
+            }
         } catch (Exception e) {
             // TODO: handle exception
         }

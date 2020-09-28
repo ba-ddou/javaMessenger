@@ -24,9 +24,14 @@ public class Controller {
         authenticationWindow = new AuthenticationWindow(this);
     }
 
-    private void renderChatWindow() {
-        dataStore = new DataStore(new User("Badou", "uyge75wrfeywgvyuer"));
-        chatWindow = new ChatWindow();
+    public void onSuccessfullAuthentication(String username, String token) {
+        renderChatWindow(username, token);
+    }
+
+    private void renderChatWindow(String username, String token) {
+        authenticationWindow.dispose();
+        dataStore = new DataStore(new User(username, token));
+        chatWindow = new ChatWindow(this);
         dataStore.addObserver(chatWindow);
         webSocketRef = WebSocket.getInstance(this);
     }
