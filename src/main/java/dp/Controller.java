@@ -1,8 +1,10 @@
 package dp;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
-public class Controller extends JFrame {
+public class Controller {
     /**
      *
      */
@@ -10,8 +12,19 @@ public class Controller extends JFrame {
     private WebSocket webSocketRef = null;
     private DataStore dataStore;
     private ChatWindow chatWindow = null;
+    private AuthenticationWindow authenticationWindow = null;
 
     public Controller() {
+
+        renderAuthenticationWindow();
+    }
+
+    private void renderAuthenticationWindow() {
+
+        authenticationWindow = new AuthenticationWindow(this);
+    }
+
+    private void renderChatWindow() {
         dataStore = new DataStore(new User("Badou", "uyge75wrfeywgvyuer"));
         chatWindow = new ChatWindow();
         dataStore.addObserver(chatWindow);
