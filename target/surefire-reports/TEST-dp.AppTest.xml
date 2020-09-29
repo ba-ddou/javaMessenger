@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dp.AppTest" time="0.044" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dp.AppTest" time="0.051" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="MA"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/badou/Desktop/javaMessenger/target/surefire/surefirebooter16091858683790291171.jar /Users/badou/Desktop/javaMessenger/target/surefire 2020-09-28T20-05-40_043-jvmRun1 surefire5660524938122799252tmp surefire_05026082911826565395tmp"/>
+    <property name="sun.java.command" value="/Users/badou/Desktop/javaMessenger/target/surefire/surefirebooter3450309536514669430.jar /Users/badou/Desktop/javaMessenger/target/surefire 2020-09-29T22-38-20_860-jvmRun1 surefire16678886534085784607tmp surefire_017398895877704562263tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/badou/Desktop/javaMessenger/target/test-classes:/Users/badou/Desktop/javaMessenger/target/classes:/Users/badou/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/badou/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/badou/.m2/repository/io/socket/socket.io-client/1.0.0/socket.io-client-1.0.0.jar:/Users/badou/.m2/repository/io/socket/engine.io-client/1.0.0/engine.io-client-1.0.0.jar:/Users/badou/.m2/repository/org/json/json/20090211/json-20090211.jar:/Users/badou/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/badou/.m2/repository/com/squareup/okhttp3/okhttp/4.9.0/okhttp-4.9.0.jar:/Users/badou/.m2/repository/com/squareup/okio/okio/2.8.0/okio-2.8.0.jar:/Users/badou/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.0/kotlin-stdlib-common-1.4.0.jar:/Users/badou/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.4.10/kotlin-stdlib-1.4.10.jar:/Users/badou/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:"/>
@@ -28,7 +28,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/badou/Desktop/javaMessenger/target/surefire/surefirebooter16091858683790291171.jar"/>
+    <property name="surefire.real.class.path" value="/Users/badou/Desktop/javaMessenger/target/surefire/surefirebooter3450309536514669430.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="14.0.1+14"/>
@@ -53,5 +53,5 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="dp.AppTest" time="0.001"/>
+  <testcase name="shouldAnswerWithTrue" classname="dp.AppTest" time="0.004"/>
 </testsuite>

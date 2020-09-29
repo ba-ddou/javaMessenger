@@ -6,7 +6,7 @@
   <groupId>dp</groupId>
   <artifactId>javaMessenger</artifactId>
   <version>1.0-SNAPSHOT</version>
-
+  <packaging>jar</packaging>
   <name>javaMessenger</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
