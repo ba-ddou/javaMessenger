@@ -44,7 +44,7 @@ public class Controller {
     }
 
     public void sendMessage(String text) {
-
+        dataStore.addMessage(new Message(dataStore.getUsername(), text));
         webSocketRef.emitEvent("message", new Message(dataStore.getUsername(), text));
     }
 }

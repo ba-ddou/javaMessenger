@@ -27,7 +27,7 @@ public class WebSocket {
 
     private static void init() {
         try {
-            socketConnection = IO.socket("http://127.0.0.1:4500");
+            socketConnection = IO.socket("https://java-messenger-api.herokuapp.com/");
             socketConnection.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
 
                 @Override

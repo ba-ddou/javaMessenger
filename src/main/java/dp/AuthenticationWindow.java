@@ -68,8 +68,9 @@ public class AuthenticationWindow extends JFrame {
         authenticationPanel.add(connectButton);
 
         add("Center", authenticationPanel);
-        this.setSize(300, 200);
-        this.setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
+        setVisible(true);
     }
 
     public void onLogin() {
@@ -85,7 +86,7 @@ public class AuthenticationWindow extends JFrame {
 
     private void submitAuthenticationCredentials(String username, String password) {
         try {
-            String response = post("http://127.0.0.1:4500/authentication",
+            String response = post("https://java-messenger-api.herokuapp.com/authentication",
                     "{\"username\":\"" + username + "\",\"password\":\"" + password + "\"}");
             System.out.println("response: " + response);
             // System.out.println(response.equalsIgnoreCase("false"));
